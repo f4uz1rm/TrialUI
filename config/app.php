@@ -55,6 +55,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'api' => env('API', 'http://api.champ-group.com/'),
 
     'asset_url' => env('ASSET_URL'),
 

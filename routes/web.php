@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Master\Karyawan\Pegawai;
+use App\Http\Livewire\Master\Referensi\Departemen;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -25,6 +27,9 @@ Auth::routes();
 Route::controller(Dashboard::class)->group(function () {
     Route::get('/profile', 'profile')->name('profile');
     Route::get('/dashboard', 'render')->name('dashboard');
+});
+Route::controller(Pegawai::class)->group(function () {
+    Route::get('/view_pegawai', 'viewPegawai')->name('viewPegawai');
 });
 Route::get('/dashboard', [Dashboard::class, 'render'])->name('dashboard');
 

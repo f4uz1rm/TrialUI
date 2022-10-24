@@ -31,12 +31,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/demo_1/style.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" />
-    <script src="{{ asset('assets/js/turbolinks.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" />
 
+    <script src="{{ asset('assets/js/turbolinks.js') }}"></script>
     @livewireStyles
 </head>
 
 <body>
+    {{-- <script src="https://unpkg.com/turbolinks@5.0.0-beta3/dist/turbolinks.js"></script> --}}
     <div class="main-wrapper">
 
         <!-- partial:../../partials/_sidebar.html -->
@@ -52,12 +55,13 @@
                 @yield('content')
             </div>
             <!-- partial:../../partials/_footer.html -->
-            @include('layouts._footer')
+            {{-- @include('layouts._footer') --}}
             <!-- partial -->
 
         </div>
     </div>
     @livewireScripts
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 
     <!-- core:js -->
@@ -68,10 +72,14 @@
     <!-- inject:js -->
     <script src="{{ asset('assets/vendors/feather-icons/feather.min.js') }}"></script>
     <script src="{{ asset('assets/js/template.js') }}"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- endinject -->
     <!-- custom js for this page -->
     <!-- end custom js for this page -->
+    <script type>
+        var Turbolinks = require("turbolinks")
+        Turbolinks.start()
+    </script>
 </body>
 
 </html>
